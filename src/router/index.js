@@ -4,6 +4,7 @@ import {
   createWebHistory,
 } from 'vue-router';
 import HomeView from '../views/HomeView.vue';
+import CreatorProfileTribeView from '../views/CreatorProfileTribeView.vue';
 import { patchProp } from 'vue';
 
 const routes = [
@@ -15,7 +16,7 @@ const routes = [
   {
     path: '/creator-profil-tribe',
     name: 'creator-profil-tribe',
-    component: () => import('../views/CreatorProfileTribeView.vue'),
+    component: CreatorProfileTribeView,
   },
   {
     path: '/login',
@@ -38,8 +39,8 @@ const router = createRouter({
   // Menggunakan createWebHashHistory adalah cara paling stabil untuk deployment di GitHub Pages.
   // Ini akan membuat URL Anda terlihat seperti: .../sociabuzzClonePortfolio/#/
   // Mode ini menghindari masalah 404 saat me-refresh halaman di sub-direktori.
-  history: createWebHashHistory(import.meta.BASE_URL),
-  // history: createWebHistory(import.meta.BASE_URL), // Opsi ini juga benar, tapi hash lebih aman.
+  // history: createWebHashHistory(import.meta.BASE_URL),
+  history: createWebHistory(import.meta.BASE_URL), // Opsi ini juga benar, tapi hash lebih aman.
   routes,
 });
 
