@@ -1,0 +1,46 @@
+@import 'tailwindcss';
+@custom-variant dark (&:where(.dark, .dark *));
+
+.card-support {
+  @apply h-55 w-82.5;
+}
+
+.nav-glass {
+  background-color: rgba(255, 255, 255, 0.5) !important;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  transition: background-color 0.3s ease;
+}
+
+.dark .nav-glass {
+  background-color: rgba(17, 17, 17, 0.5) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  backdrop-filter: blur(10px) !important;
+}
+
+body.resize-active .grid-card {
+  transition: none;
+}
+
+.grid-card {
+  transition: width 0.3s ease-out;
+}
+
+/* Google Translate */
+.hidden-google-translate {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  width: 0px;
+  height: 0px;
+  overflow: hidden;
+}
+
+.skiptranslate,
+.goog-te-banner-frame {
+  display: none !important;
+}
+
+.body {
+  top: 0px !important;
+}
