@@ -1,1 +1,0 @@
-import{O as e,h as t}from"./index-_lBqAvDi.js";function n(){let n=e(!1);return{isVisible:n,inputType:t(()=>n.value?`text`:`password`),toggleVisibility:()=>{n.value=!n.value}}}export{n as t};
