@@ -1,10 +1,10 @@
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
-import tailwindcss from 'tailwindcss';
+import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
   plugins: [vue(), tailwindcss()],
-  base: '/sociabuzzClonePortfolio/',
+  base: '/',
   resolve: {
     // Tambahkan alias untuk path yang lebih bersih
     alias: [{ find: '@', replacement: '/src' }],
