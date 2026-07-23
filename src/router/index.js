@@ -30,7 +30,16 @@ const routes = [
 ];
 
 const router = createRouter({
-  history: createWebHistory(),
+  // Local
+  // history: createWebHistory(),
+  // routes,
+
+  // Github Pages Deployment
+  // Menggunakan createWebHashHistory adalah cara paling stabil untuk deployment di GitHub Pages.
+  // Ini akan membuat URL Anda terlihat seperti: .../sociabuzzClonePortfolio/#/
+  // Mode ini menghindari masalah 404 saat me-refresh halaman di sub-direktori.
+  history: createWebHashHistory(import.meta.BASE_URL),
+  // history: createWebHistory(import.meta.BASE_URL), // Opsi ini juga benar, tapi hash lebih aman.
   routes,
 });
 
