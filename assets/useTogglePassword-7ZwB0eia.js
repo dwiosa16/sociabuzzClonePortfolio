@@ -1,0 +1,1 @@
+import{c as e,y as t}from"./index-DujJ96hp.js";function n(){let n=t(!1);return{isVisible:n,inputType:e(()=>n.value?`text`:`password`),toggleVisibility:()=>{n.value=!n.value}}}export{n as t};
