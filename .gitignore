@@ -5,7 +5,7 @@
 /.pnpm-store
 
 # Build output
-/dist
+# /dist
 
 # Logs
 logs
